@@ -1,0 +1,182 @@
+2025-04-30 14:52:00,663 | INFO | Log initialized.
+2025-04-30 14:52:00,663 | INFO | Starting West Nile Virus Simulation
+2025-04-30 14:52:00,663 | INFO | Config Dict: {'remote_url': 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTaak8wN-15vWasle4xYOKb4DS_qfQ6vospzX0F8G8puF0ucyHqHyKM2HyYFm0LrUxDfq6CNRynqE3Y/pub?gid=710887919&single=true&output=csv', 'proj_dir': 'C:/Users/thoma/Desktop/GIS3005/FinalProject/3005_FinalProject/', 'data_format': 'csv', 'geocoder_prefix_url': 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=', 'geocoder_suffix_url': '&benchmark=Public_AR_Census2020&format=json', 'workspace': 'C:/Users/thoma/Desktop/GIS3005/Lab 1/WestNileOutbreak/WestNileOutbreak.gdb', 'aprx': 'C:/Users/thoma/Desktop/GIS3005/Lab 1/WestNileOutbreak/WestNileOutbreak.aprx'}
+2025-04-30 14:52:00,663 | DEBUG | Entering etl method
+2025-04-30 14:52:00,664 | INFO | E-t-l-ing...
+2025-04-30 14:52:00,670 | DEBUG | Starting new HTTPS connection (1): docs.google.com:443
+2025-04-30 14:52:01,349 | DEBUG | https://docs.google.com:443 "GET /spreadsheets/d/e/2PACX-1vTaak8wN-15vWasle4xYOKb4DS_qfQ6vospzX0F8G8puF0ucyHqHyKM2HyYFm0LrUxDfq6CNRynqE3Y/pub?gid=710887919&single=true&output=csv HTTP/11" 307 None
+2025-04-30 14:52:01,354 | DEBUG | Starting new HTTPS connection (1): doc-08-5o-sheets.googleusercontent.com:443
+2025-04-30 14:52:01,889 | DEBUG | https://doc-08-5o-sheets.googleusercontent.com:443 "GET /pub/54bogvaave6cua4cdnls17ksc4/jf36uns5rad4mela7kl3tc9140/1746046320000/106252264249793197729/*/e@2PACX-1vTaak8wN-15vWasle4xYOKb4DS_qfQ6vospzX0F8G8puF0ucyHqHyKM2HyYFm0LrUxDfq6CNRynqE3Y?gid=710887919&single=true&output=csv HTTP/11" 200 None
+2025-04-30 14:52:01,926 | DEBUG | Starting new HTTPS connection (1): geocoding.geo.census.gov:443
+2025-04-30 14:52:02,635 | DEBUG | https://geocoding.geo.census.gov:443 "GET /geocoder/locations/onelineaddress?address=3235+Arrowwood+Lane%2C+Boulder%2C+CO&benchmark=Public_AR_Census2020&format=json HTTP/11" 200 660
+2025-04-30 14:52:02,639 | DEBUG | Starting new HTTPS connection (1): geocoding.geo.census.gov:443
+2025-04-30 14:52:03,351 | DEBUG | https://geocoding.geo.census.gov:443 "GET /geocoder/locations/onelineaddress?address=320+27th+Street%2C+Boulder%2C+CO&benchmark=Public_AR_Census2020&format=json HTTP/11" 200 643
+2025-04-30 14:52:03,356 | DEBUG | Starting new HTTPS connection (1): geocoding.geo.census.gov:443
+2025-04-30 14:52:04,300 | DEBUG | https://geocoding.geo.census.gov:443 "GET /geocoder/locations/onelineaddress?address=205+Camden+Place%2C+Boulder%2C+CO&benchmark=Public_AR_Census2020&format=json HTTP/11" 200 648
+2025-04-30 14:52:04,305 | DEBUG | Starting new HTTPS connection (1): geocoding.geo.census.gov:443
+2025-04-30 14:52:05,014 | DEBUG | https://geocoding.geo.census.gov:443 "GET /geocoder/locations/onelineaddress?address=420+Christmas+Tree+Drive%2C+Boulder%2C+CO&benchmark=Public_AR_Census2020&format=json HTTP/11" 200 672
+2025-04-30 14:52:05,020 | DEBUG | Starting new HTTPS connection (1): geocoding.geo.census.gov:443
+2025-04-30 14:52:06,720 | DEBUG | https://geocoding.geo.census.gov:443 "GET /geocoder/locations/onelineaddress?address=865+Circle+Drive%2C+Boulder%2C+CO&benchmark=Public_AR_Census2020&format=json HTTP/11" 200 648
+2025-04-30 14:52:08,451 | INFO | ETL processing complete
+2025-04-30 14:52:08,451 | DEBUG | Exiting etl method
+2025-04-30 14:52:08,451 | DEBUG | Entering set_spatial_reference method
+2025-04-30 14:52:08,535 | INFO | Spatial reference set successfully to NAD 1983 StatePlane Colorado North
+2025-04-30 14:52:08,535 | DEBUG | Exiting set_spatial_reference method
+2025-04-30 14:52:08,558 | DEBUG | Entering apply_simple_renderer method
+2025-04-30 14:52:08,611 | INFO | Found layer: Final_Analysis_Layer
+2025-04-30 14:52:08,678 | INFO | Simple renderer applied successfully
+2025-04-30 14:52:08,713 | DEBUG | Exiting apply_simple_renderer method
+2025-04-30 14:52:08,745 | INFO | === Layer Information ===
+2025-04-30 14:52:08,788 | INFO | Layer name: Target_Addresses
+2025-04-30 14:52:08,789 | INFO |   Visible: True
+2025-04-30 14:52:08,790 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\Target_Addresses
+2025-04-30 14:52:08,890 | INFO |   Feature count: 69631
+2025-04-30 14:52:08,891 | INFO |   Definition query: Join_Count = 1
+2025-04-30 14:52:08,891 | INFO |   ---
+2025-04-30 14:52:08,892 | INFO | Layer name: avoid_points
+2025-04-30 14:52:08,892 | INFO |   Visible: True
+2025-04-30 14:52:08,892 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\avoid_points
+2025-04-30 14:52:08,978 | INFO |   Feature count: 5
+2025-04-30 14:52:08,980 | INFO |   Definition query: 
+2025-04-30 14:52:08,980 | INFO |   ---
+2025-04-30 14:52:08,980 | INFO | Layer name: Final_Analysis_Layer
+2025-04-30 14:52:08,980 | INFO |   Visible: True
+2025-04-30 14:52:08,980 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\Final_Analysis_Layer
+2025-04-30 14:52:09,062 | INFO |   Feature count: 1
+2025-04-30 14:52:09,062 | INFO |   Definition query: 
+2025-04-30 14:52:09,062 | INFO |   ---
+2025-04-30 14:52:09,062 | INFO | Layer name: avoid_points_buffered
+2025-04-30 14:52:09,062 | INFO |   Visible: True
+2025-04-30 14:52:09,063 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\avoid_points_buffered
+2025-04-30 14:52:09,140 | INFO |   Feature count: 1
+2025-04-30 14:52:09,140 | INFO |   Definition query: 
+2025-04-30 14:52:09,140 | INFO |   ---
+2025-04-30 14:52:09,140 | INFO | Layer name: Erased_Intersect_Layer
+2025-04-30 14:52:09,140 | INFO |   Visible: False
+2025-04-30 14:52:09,140 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\Erased_Intersect_Layer
+2025-04-30 14:52:09,224 | INFO |   Feature count: 1
+2025-04-30 14:52:09,225 | INFO |   Definition query: 
+2025-04-30 14:52:09,225 | INFO |   ---
+2025-04-30 14:52:09,225 | INFO | Layer name: SJ_lab2
+2025-04-30 14:52:09,225 | INFO |   Visible: False
+2025-04-30 14:52:09,225 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\SJ_lab2
+2025-04-30 14:52:09,310 | INFO |   Feature count: 9336
+2025-04-30 14:52:09,310 | INFO |   Definition query: 
+2025-04-30 14:52:09,310 | INFO |   ---
+2025-04-30 14:52:09,310 | INFO | Layer name: At Risk Addresses
+2025-04-30 14:52:09,310 | INFO |   Visible: False
+2025-04-30 14:52:09,311 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\spatialJoin1
+2025-04-30 14:52:09,392 | INFO |   Feature count: 9336
+2025-04-30 14:52:09,392 | INFO |   Definition query: 
+2025-04-30 14:52:09,392 | INFO |   ---
+2025-04-30 14:52:09,392 | INFO | Layer name: Addresses
+2025-04-30 14:52:09,393 | INFO |   Visible: False
+2025-04-30 14:52:09,394 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\data\shapefiles\Addresses\Addresses.shp
+2025-04-30 14:52:09,416 | INFO |   Feature count: 69631
+2025-04-30 14:52:09,416 | INFO |   Definition query: 
+2025-04-30 14:52:09,416 | INFO |   ---
+2025-04-30 14:52:09,416 | INFO | Layer name: Mosquito_Larval_Sites_buffered
+2025-04-30 14:52:09,416 | INFO |   Visible: True
+2025-04-30 14:52:09,418 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\Mosquito_Larval_Sites_buffered
+2025-04-30 14:52:09,499 | INFO |   Feature count: 1
+2025-04-30 14:52:09,499 | INFO |   Definition query: 
+2025-04-30 14:52:09,499 | INFO |   ---
+2025-04-30 14:52:09,499 | INFO | Layer name: Wetlands_buffered
+2025-04-30 14:52:09,501 | INFO |   Visible: True
+2025-04-30 14:52:09,501 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\Wetlands_buffered
+2025-04-30 14:52:09,580 | INFO |   Feature count: 1
+2025-04-30 14:52:09,580 | INFO |   Definition query: 
+2025-04-30 14:52:09,580 | INFO |   ---
+2025-04-30 14:52:09,580 | INFO | Layer name: Lakes_and_Reservoirs_Boulder_County_buffered
+2025-04-30 14:52:09,580 | INFO |   Visible: True
+2025-04-30 14:52:09,581 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\Lakes_and_Reservoirs_Boulder_County_buffered
+2025-04-30 14:52:09,666 | INFO |   Feature count: 1
+2025-04-30 14:52:09,666 | INFO |   Definition query: 
+2025-04-30 14:52:09,666 | INFO |   ---
+2025-04-30 14:52:09,666 | INFO | Layer name: OSMP_Properties_buffered
+2025-04-30 14:52:09,666 | INFO |   Visible: True
+2025-04-30 14:52:09,666 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\WestNileOutbreak\WestNileOutbreak.gdb\OSMP_Properties_buffered
+2025-04-30 14:52:09,750 | INFO |   Feature count: 1
+2025-04-30 14:52:09,750 | INFO |   Definition query: 
+2025-04-30 14:52:09,750 | INFO |   ---
+2025-04-30 14:52:09,750 | INFO | Layer name: Lakes_and_Reservoirs_Boulder_County
+2025-04-30 14:52:09,750 | INFO |   Visible: True
+2025-04-30 14:52:09,751 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\data\shapefiles\allShapefiles\Lakes_and_Reservoirs_Boulder_County.shp
+2025-04-30 14:52:09,776 | INFO |   Feature count: 2045
+2025-04-30 14:52:09,776 | INFO |   Definition query: 
+2025-04-30 14:52:09,776 | INFO |   ---
+2025-04-30 14:52:09,776 | INFO | Layer name: Wetlands
+2025-04-30 14:52:09,776 | INFO |   Visible: True
+2025-04-30 14:52:09,776 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\data\shapefiles\Wetlands\Wetlands.shp
+2025-04-30 14:52:09,804 | INFO |   Feature count: 3
+2025-04-30 14:52:09,804 | INFO |   Definition query: 
+2025-04-30 14:52:09,804 | INFO |   ---
+2025-04-30 14:52:09,804 | INFO | Layer name: Mosquito_Larval_Sites
+2025-04-30 14:52:09,804 | INFO |   Visible: True
+2025-04-30 14:52:09,804 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\data\shapefiles\Mosquito_Larval_Sites\Mosquito_Larval_Sites.shp
+2025-04-30 14:52:09,834 | INFO |   Feature count: 596
+2025-04-30 14:52:09,834 | INFO |   Definition query: 
+2025-04-30 14:52:09,834 | INFO |   ---
+2025-04-30 14:52:09,834 | INFO | Layer name: OSMP_Properties
+2025-04-30 14:52:09,834 | INFO |   Visible: True
+2025-04-30 14:52:09,834 | INFO |   Data source: C:\Users\thoma\Desktop\GIS3005\Lab 1\data\shapefiles\OSMP_Properties\OSMP_Properties.shp
+2025-04-30 14:52:09,863 | INFO |   Feature count: 742
+2025-04-30 14:52:09,863 | INFO |   Definition query: 
+2025-04-30 14:52:09,863 | INFO |   ---
+2025-04-30 14:52:09,863 | INFO | Layer name: World Topographic Map
+2025-04-30 14:52:09,863 | INFO |   Visible: True
+2025-04-30 14:52:09,864 | INFO |   Data source: https:\cdn.arcgis.com\sharing\rest\content\items\7dc6cea0b1764a1f9af2e679f642f0f5\resources\styles\root.json
+2025-04-30 14:52:10,068 | INFO |   Could not get feature count
+2025-04-30 14:52:10,068 | INFO |   ---
+2025-04-30 14:52:10,069 | INFO | Layer name: World Hillshade
+2025-04-30 14:52:10,070 | INFO |   Visible: True
+2025-04-30 14:52:10,070 | INFO |   Data source: https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer
+2025-04-30 14:52:10,393 | INFO |   Could not get feature count
+2025-04-30 14:52:10,393 | INFO |   ---
+2025-04-30 14:52:10,417 | DEBUG | Entering apply_definition_query method
+2025-04-30 14:52:10,430 | DEBUG | Getting field info for layer: Target_Addresses
+2025-04-30 14:52:10,499 | INFO | Found layer: Target_Addresses
+2025-04-30 14:52:10,664 | INFO | Field: OBJECTID_1, Type: OID, Length: 4
+2025-04-30 14:52:10,664 | INFO | Field: Shape, Type: Geometry, Length: 0
+2025-04-30 14:52:10,664 | INFO | Field: Join_Count, Type: Integer, Length: 4
+2025-04-30 14:52:10,664 | INFO | Field: TARGET_FID, Type: Integer, Length: 4
+2025-04-30 14:52:10,664 | INFO | Field: FID_Mosquito_Larval_Sites_buffered, Type: Integer, Length: 4
+2025-04-30 14:52:10,664 | INFO | Field: FID_Wetlands_buffered, Type: Integer, Length: 4
+2025-04-30 14:52:10,664 | INFO | Field: FID_Lakes_and_Reservoirs_Boulder_County_buffered, Type: Integer, Length: 4
+2025-04-30 14:52:10,664 | INFO | Field: FID_OSMP_Properties_buffered, Type: Integer, Length: 4
+2025-04-30 14:52:10,666 | INFO | Field: OBJECTID, Type: Integer, Length: 4
+2025-04-30 14:52:10,666 | INFO | Field: FULLADDR, Type: String, Length: 45
+2025-04-30 14:52:10,666 | INFO | Field: STATUS, Type: String, Length: 12
+2025-04-30 14:52:10,666 | INFO | Field: POINTTYPE, Type: String, Length: 13
+2025-04-30 14:52:10,666 | INFO | Field: ADDRNUM, Type: String, Length: 17
+2025-04-30 14:52:10,666 | INFO | Field: UNITID, Type: String, Length: 10
+2025-04-30 14:52:10,666 | INFO | Field: PREDIR, Type: String, Length: 1
+2025-04-30 14:52:10,666 | INFO | Field: STREETNAME, Type: String, Length: 25
+2025-04-30 14:52:10,666 | INFO | Field: STREETSUFF, Type: String, Length: 4
+2025-04-30 14:52:10,666 | INFO | Field: POSTDIR, Type: String, Length: 1
+2025-04-30 14:52:10,666 | INFO | Field: SHAPE_1, Type: String, Length: 1
+2025-04-30 14:52:10,666 | INFO | Row count: 69631
+2025-04-30 14:52:10,706 | INFO | Found layer for definition query: Target_Addresses
+2025-04-30 14:52:10,757 | INFO | Definition query applied: Join_Count = 1
+2025-04-30 14:52:10,797 | DEBUG | Entering set_map_extent_to_data method
+2025-04-30 14:52:10,866 | INFO | Would zoom to extent of Target_Addresses (operation handled in layout's map frame)
+2025-04-30 14:52:10,867 | ERROR | Error setting map extent: C:/Users/thoma/Desktop/GIS3005/Lab 1/WestNileOutbreak/WestNileOutbreak.aprx
+2025-04-30 14:52:10,867 | DEBUG | Exiting set_map_extent_to_data method
+2025-04-30 14:52:10,876 | DEBUG | Exiting apply_definition_query method
+2025-04-30 14:52:10,884 | DEBUG | Entering set_map_extent_to_data method
+2025-04-30 14:52:10,939 | INFO | Would zoom to extent of Target_Addresses (operation handled in layout's map frame)
+2025-04-30 14:52:10,974 | INFO | Map project saved
+2025-04-30 14:52:10,974 | DEBUG | Exiting set_map_extent_to_data method
+2025-04-30 14:52:10,996 | DEBUG | Entering exportMap method
+2025-04-30 14:52:18,088 | INFO | User entered subtitle: Final Test
+2025-04-30 14:52:18,088 | DEBUG | Found element: Text
+2025-04-30 14:52:18,088 | DEBUG | Found element: Title
+2025-04-30 14:52:18,088 | INFO | Modifying title element: Title
+2025-04-30 14:52:18,118 | DEBUG | Found element: Legend
+2025-04-30 14:52:18,118 | DEBUG | Found element: North Arrow
+2025-04-30 14:52:18,118 | DEBUG | Found element: Scale Bar
+2025-04-30 14:52:18,118 | DEBUG | Found element: Map Frame
+2025-04-30 14:52:18,118 | INFO | Refreshing map frame: Map Frame
+2025-04-30 14:52:18,154 | INFO | Exporting map to: C:/Users/thoma/Desktop/GIS3005/FinalProject/3005_FinalProject/WestNileOutbreakMap.pdf
+2025-04-30 14:52:31,254 | INFO | Map exported successfully
+2025-04-30 14:52:31,254 | DEBUG | Exiting exportMap method

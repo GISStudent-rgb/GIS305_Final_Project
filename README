@@ -1,0 +1,22 @@
+#GIS 3012 - Final Project
+# West Nile Virus Outbreak Mapping
+
+A Python-based ETL and spatial analysis tool using ArcGIS Pro to visualize potential West Nile Virus risk areas in Boulder, CO.
+
+## Features
+
+- Downloads address data from a Google Sheet
+- Geocodes addresses via the US Census Geocoder
+- Converts address coordinates to spatial points in a geodatabase
+- Spatially joins addresses with risk polygons
+- Applies renderers and definition queries in ArcGIS Pro
+- Exports final map to PDF
+- Exports Target Addresses to CSV
+
+## Usage
+
+1. Configure `config/wnvoutbreak.yaml`
+2. Run `python finalproject.py`
+3. Enter a map subtitle when prompted
+4. Find the exported map, addresses, and log file in your project directory
+
